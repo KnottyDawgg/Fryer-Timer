@@ -1,0 +1,267 @@
+/* ==========================================
+   Fryer Timer v2.0
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:#1c1c1c;
+
+    color:white;
+
+    font-family:Arial,Helvetica,sans-serif;
+
+}
+
+/* ===========================
+   Header
+=========================== */
+
+header{
+
+    background:#2b2b2b;
+
+    padding:20px;
+
+    text-align:center;
+
+    border-bottom:3px solid #444;
+
+}
+
+header h1{
+
+    font-size:42px;
+
+    letter-spacing:1px;
+
+}
+
+/* ===========================
+   Layout
+=========================== */
+
+#basketContainer{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+    padding:20px;
+
+}
+
+/* ===========================
+   Basket
+=========================== */
+
+.basket{
+
+    background:#303030;
+
+    border-radius:16px;
+
+    padding:15px;
+
+    box-shadow:0 0 15px rgba(0,0,0,.4);
+
+}
+
+.basket h2{
+
+    text-align:center;
+
+    margin-bottom:18px;
+
+    font-size:28px;
+
+}
+
+/* ===========================
+   Food Card
+=========================== */
+
+.foodCard{
+
+    background:#3d3d3d;
+
+    border-radius:12px;
+
+    padding:14px;
+
+    margin-bottom:15px;
+
+    transition:.2s;
+
+}
+
+.foodCard:hover{
+
+    transform:scale(1.02);
+
+}
+
+/* ===========================
+   Top Row
+=========================== */
+
+.foodRow{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:10px;
+
+}
+
+.foodName{
+
+    font-size:19px;
+
+    font-weight:bold;
+
+}
+
+.timer{
+
+    font-size:20px;
+
+    font-weight:bold;
+
+}
+
+/* ===========================
+   Status
+=========================== */
+
+.status{
+
+    margin-top:5px;
+
+    margin-bottom:12px;
+
+    font-size:15px;
+
+    color:#d0d0d0;
+
+}
+
+/* ===========================
+   Button
+=========================== */
+
+.actionButton{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+/* Button Colors */
+
+.actionButton.green{
+
+    background:#49d96b;
+
+    color:#111;
+
+}
+
+.actionButton.yellow{
+
+    background:#ffd84d;
+
+    color:#111;
+
+}
+
+.actionButton.red{
+
+    background:#ff5252;
+
+    color:white;
+
+}
+
+.actionButton:hover{
+
+    filter:brightness(110%);
+
+}
+
+/* ===========================
+   Timer Colors
+=========================== */
+
+.timer.green{
+
+    color:#49d96b;
+
+}
+
+.timer.yellow{
+
+    color:#ffd84d;
+
+}
+
+.timer.red{
+
+    color:#ff5252;
+
+}
+
+/* ===========================
+   Flashing
+=========================== */
+
+.flash{
+
+    animation:flash .5s infinite;
+
+}
+
+@keyframes flash{
+
+    0%{
+
+        background:#3d3d3d;
+
+    }
+
+    50%{
+
+        background:#8b0000;
+
+    }
+
+    100%{
+
+        background:#3d3d3d;
+
+    }
+
+}
